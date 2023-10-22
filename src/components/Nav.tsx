@@ -1,5 +1,6 @@
 'use client'
 import { Dispatch, SetStateAction, useEffect } from 'react'
+import Link from 'next/link'
 
 interface Props {
   setVisibility:Dispatch<SetStateAction<boolean>>
@@ -20,10 +21,10 @@ const Nav = ({ setVisibility }: Props) => {
   return (
     <div>
       <nav className='h-screen w-1/2 bg-green-700 flex flex-col gap-4 items-start absolute top-0 right-0 p-10 justify-center shadow-lg' >
-        <a href="/" className='hover:text-blue-900 hover:underline font-semibold transition-all ease'>Inicio</a>
-        <a href="/sobremi" className='hover:text-blue-900 hover:underline font-semibold transition-all ease'>Sobre mi</a>
-        <a href="/blog" className='hover:text-blue-900 hover:underline font-semibold transition-all ease'>Blog</a>
-        <a href="/turno" className='w-full block text-green-950 border-2 border-green-950 rounded-md p-1 mt-2 text-center hover:text-blue-900 hover:border-blue-900 transition-all ease' >Agenda</a>
+        <Link href="/" className='hover:text-blue-900 hover:underline font-semibold transition-all ease'>Inicio</Link>
+        <Link href="/sobremi" className='hover:text-blue-900 hover:underline font-semibold transition-all ease'>Sobre mi</Link>
+        <Link href="/blog" className='hover:text-blue-900 hover:underline font-semibold transition-all ease'>Blog</Link>
+        <Link href="/appointments" className='w-full block text-green-950 border-2 border-green-950 rounded-md p-1 mt-2 text-center hover:text-blue-900 hover:border-blue-900 transition-all ease' >Agenda</Link>
         <button className='hover:border-2 rounded-full absolute top-4 left-4'
           onClick={() => setVisibility(false)}
         >

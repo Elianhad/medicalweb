@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import Link from 'next/link'
 import Image from 'next/image'
 import Nav from './Nav'
 
@@ -26,10 +27,10 @@ const Header = () => {
         </svg>
       </button>
       <nav className='hidden sm:flex gap-4 items-center' >
-        <a href="/" className='hover:text-blue-600 hover:underline font-semibold transition-all ease'>Inicio</a>
-        <a href="/sobremi" className='hover:text-blue-600 hover:underline font-semibold transition-all ease'>Sobre mi</a>
-        <a href="/blog" className='hover:text-blue-600 hover:underline font-semibold transition-all ease'>Blog</a>
-        <a href="/turno" className='text-green-600 ml-4 border-2 border-green-600 rounded-md p-1 hover:text-blue-600 hover:border-blue-600 transition-all ease' >Agenda</a>
+        <Link href="/" className='hover:text-blue-600 hover:underline font-semibold transition-all ease'>Inicio</Link>
+        <Link href="/sobremi" className='hover:text-blue-600 hover:underline font-semibold transition-all ease'>Sobre mi</Link>
+        <Link href="/blog" className='hover:text-blue-600 hover:underline font-semibold transition-all ease'>Blog</Link>
+        <Link href="/appointments" className='text-green-600 ml-4 border-2 border-green-600 rounded-md p-1 hover:text-blue-600 hover:border-blue-600 transition-all ease' >Agenda</Link>
       </nav>
       { isnavVisible && <Nav setVisibility={setnavVisible} /> }
     </header>
